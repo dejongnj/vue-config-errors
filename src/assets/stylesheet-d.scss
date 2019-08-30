@@ -1,0 +1,5 @@
+// stylesheet I don't want hashed or auto included/injected in index.html
+// will use other strategy to load css
+div {
+  border: 2px solid orange;
+}
