@@ -24,11 +24,11 @@ module.exports = {
         .end()
       config.plugin('html')
         .tap(([config, ...args]) => {
-          config.excludeChunks = ['styles-a', 'stylesheet-b.scss', 'styles-c.css']
-          return [config, ...args]
+          config.excludeChunks = ['styles-a', 'stylesheet-b.scss', 'styles-c.css', /styles/]
+          const returnArgs = [config, ...args]
+          return returnArgs
         })
         .end()
     }
-      
   }
 }
